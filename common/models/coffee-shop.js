@@ -8,11 +8,11 @@ module.exports = function(CoffeeShop) {
     console.log('Current hour is ' + currentHour);
     var response;
     if (currentHour > OPEN_HOUR && currentHour < CLOSE_HOUR) {
-      response = 'We are open for business. We are still open for ' +
+      response = 'We are open for business. We are still open for about ' +
                   (CLOSE_HOUR - currentHour) + ' hours.';
     }
     else {
-      response = 'Sorry but we are closed. Only ' +
+      response = 'Sorry but we are closed. Only about ' +
                   (((OPEN_HOUR + 24) % CLOSE_HOUR) -
                   (currentHour % CLOSE_HOUR)) +
                    ' hours till we are open! \n' +
